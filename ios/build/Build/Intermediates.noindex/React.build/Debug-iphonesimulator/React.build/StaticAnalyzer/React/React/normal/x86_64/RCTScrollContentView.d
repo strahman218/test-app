@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/RCTView.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/saraf/workspace/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/saraf/workspace/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/ScrollView/RCTScrollView.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/saraf/workspace/AwesomeProject/node_modules/react-native/React/Views/ScrollView/RCTScrollableProtocol.h

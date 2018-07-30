@@ -1,0 +1,15 @@
+export const images = {
+    loginSparkler: require('./loginSparkler.png'),
+    defaultAvatar: require('./defaultAvatar.png'),
+    sparkler: require('./sparkler.png'),
+    woodmansCard: require('./woodmansCard.png'),
+  upsideLogo: require('./upsideLogo.png'),
+  upsideLogoWhite: require('./upsideLogoWhite.png'),
+  woodmansAccountScreen: require('./woodmansAccountScreen.png'),
+  woodmansHomeScreen: require('./woodmansHomeScreen.png'),
+  helpCenterIcon: require('./Icons/help-center-icon.png'),
+  twentyFivePointsTag: require('./twentyFivePointsTag.png'),
+  store: require('./Icons/store.png'),
+  experiences: require('./Icons/experiences.png'),
+  woodmansIcon: require('./woodmansIcon.png'),
+}
