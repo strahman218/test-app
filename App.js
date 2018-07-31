@@ -1,38 +1,31 @@
-import React, {Component} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ImageBackground , Button} from 'react-native';
-import { images } from './src/images'
+import React from 'react';
+import {StackNavigator, NavigationActions} from 'react-navigation'
 
-export default class App extends React.Component {
+import LoginView from './src/components/LoginScreen';
+import Amplify from 'aws-amplify'
+import aws_exports from '.'
 
-  getImage(){
-    console.log("we're in get Image")
-    // console.dir(images)
-    // console.log("thing")
-    // console.dir(thing)
-  }
+Amplify.configure(aws_exports);
 
-  render() {
-    return (
-      <ImageBackground source={images.loginSparkler} style={styles.backgroundImage}>
-        <Button title="Press Me" onPress={this.getImage}></Button>
-      </ImageBackground>
-    );
-  }
+const App = StackNavigator({
+  LoginView: {screen: LoginView}
+}, 
+{
+  initialRouteName: 'LoginView',
+  headerMode: 'none'
+});
+
+const navigateOnce = (getStateForAction) => (action, state) => {
+  const {type, routeName} = action;
+  return (
+    state &&
+    type === NavigationActions.NAVIGATE &&
+    routeName === state.routes[state.routes.length - 1].routeName
+  ) ? null : getStateForAction(action, state);
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  backgroundImage: {
-    //backgroundColor: Colors.transparent,
-    flex: 1,
-    width: null,
-    height: null,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
+App.router.getStateForAction = navigateOnce(App.router.getStateForAction);
+
+export default App;
+
+
