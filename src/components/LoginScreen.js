@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Text, View, TouchableOpacity, ImageBackground , Image} from 'react-native';
 import { Colors, Images } from '../Themes'
 import styles from '../Styles/appStyle'
+import App from '../../App'
 
 export default class LoginScreen extends Component {
     constructor(props){
@@ -15,12 +16,11 @@ export default class LoginScreen extends Component {
             picture_url: ''
         }
     }
+
+   
   //not a great name, think of something better? register? enter???
   signIn(loginType){
-    //should be either FbLogin, SignUp, or SignIn
-    console.log("this is the sign in type")
-    console.dir(loginType)
-
+    this.props.navigation.navigate('SignUpScreen', {type: loginType})
   }
 
   render() {
@@ -30,15 +30,19 @@ export default class LoginScreen extends Component {
           <Image resizeMode='contain' source={Images.upsideLogoWhite} style={styles.upsideLogo} />
           <View style={styles.connectWrapper}>
             <View style={styles.buttonWrapper}>
-              <TouchableOpacity onPress={() => this.signIn('fbLogin')} style={[styles.button, styles.buttonSecondary]}>
+              {/* <TouchableOpacity onPress={() => this.signIn('fbLogin')} style={[styles.button, styles.buttonSecondary]}>
                 <Text style={[styles.buttonText, styles.buttonTextSecondary]}>CONNECT WITH FACEBOOK</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
               <TouchableOpacity onPress={() => { this.signIn('signUp') }} style={[styles.button, styles.buttonPrimary]}>
                 <Text style={[styles.buttonText, styles.buttonTextPrimary]}>SIGN UP</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => { this.signIn('login') }} style={[styles.button, styles.buttonTertiary]}>
+
+
+              <TouchableOpacity onPress={() => { this.signIn('signIn')}} style={[styles.button, styles.buttonTertiary]}>
                 <Text style={[styles.buttonTextPrimary]}>Sign In</Text>
               </TouchableOpacity>
+
+
             </View>
             <Text style={styles.facebookNotice}>We will never post to Facebook without your permission</Text>
           </View>

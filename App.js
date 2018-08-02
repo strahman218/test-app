@@ -2,16 +2,21 @@ import React from 'react';
 import {StackNavigator, NavigationActions} from 'react-navigation'
 
 import LoginView from './src/components/LoginScreen';
+import SignUp from './src/components/SignUpScreen'
+import HomeScreen from './src/components/HomeScreen'
+
 import Amplify from 'aws-amplify'
 import aws_exports from '.'
 
 Amplify.configure(aws_exports);
 
 const App = StackNavigator({
-  LoginView: {screen: LoginView}
+  LandingPage: {screen: LoginView},
+  SignUpScreen: {screen: SignUp},
+  HomePage: {screen: HomeScreen}
 }, 
 {
-  initialRouteName: 'LoginView',
+  initialRouteName: 'LandingPage',
   headerMode: 'none'
 });
 
