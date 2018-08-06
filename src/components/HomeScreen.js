@@ -28,8 +28,6 @@ const TabNavigator = createBottomTabNavigator({
   
     // You can do whatever you like here to pick the title based on the route name
     let headerTitle = routeName;
-    console.log("this ithe route name")
-    console.dir(headerTitle)
   
     return {
       headerTitle

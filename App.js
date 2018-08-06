@@ -6,7 +6,8 @@ import SignUp from './src/components/SignUpScreen'
 import HomeScreen from './src/components/HomeScreen'
 
 import Amplify from 'aws-amplify'
-import aws_exports from '.'
+import { withAuthenticator } from 'aws-amplify-react-native';
+import aws_exports from './'
 
 Amplify.configure(aws_exports);
 
@@ -16,7 +17,7 @@ const App = StackNavigator({
   HomePage: {screen: HomeScreen}
 }, 
 {
-  initialRouteName: 'LandingPage',
+  initialRouteName: 'HomePage',
   headerMode: 'none'
 });
 
